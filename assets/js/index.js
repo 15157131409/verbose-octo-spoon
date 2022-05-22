@@ -26,7 +26,7 @@ function getUserInfo () {
         //     Authorization: localStorage.getItem('token')
         // },
         success: (res) => {
-            console.log(res);
+            // console.log(res);
             if(res.status !== 0) return layer.msg('获取用户信息失败');
             layer.msg('获取用户信息成功');
             
@@ -65,4 +65,8 @@ const randerAvatar = (user) => {
         const firstName = name[0].toUpperCase()
         $('.text-avatar').html(firstName).show();
     }
+}
+// 此方法是 跳转到文章列表
+function chenge () {
+    $('#art_list').addClass('layui-this').next().removeClass('layui-this')
 }
